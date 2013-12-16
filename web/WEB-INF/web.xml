@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>ServletProducto</servlet-name>
+        <servlet-class>Servlet.ServletProducto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletEliminar</servlet-name>
+        <servlet-class>Servlet.ServletEliminar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletModificar</servlet-name>
+        <servlet-class>Servlet.ServletModificar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletModificar2</servlet-name>
+        <servlet-class>Servlet.ServletModificar2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletProducto</servlet-name>
+        <url-pattern>/ServletProducto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletEliminar</servlet-name>
+        <url-pattern>/ServletEliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletModificar</servlet-name>
+        <url-pattern>/ServletModificar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletModificar2</servlet-name>
+        <url-pattern>/ServletModificar2</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
