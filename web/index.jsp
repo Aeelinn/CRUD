@@ -28,7 +28,7 @@
     </head>
     <body>
         <form action="ServletProducto" method="POST" name="form" id="form">
-            <label>Registrar producto</label>
+            <label>Producto</label>
             <input name="producto" type="text" /><input type="submit" value="Registrar"/>
 
             <table border="1">

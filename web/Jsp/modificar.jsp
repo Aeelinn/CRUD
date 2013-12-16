@@ -28,8 +28,35 @@
     </head>
     <body>
         <form action="ServletModificar2" method="POST" name="form" id="form">
-            <label>Modificar producto</label>
+            <label>Producto</label>
             <input name="producto" type="text" value="<%=session.getAttribute("nombre")%>"/><input type="submit" value="Modificar"/>
         </form>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Producto</th>
+                    <th colspan="2">Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for (int i = 0; i < ls.size(); i++) {%>
+                <tr>
+                    <td><%=i + 1%></td>
+                    <td><%=ls.get(i).getNombre()%></td>
+                    <td>
+                        <a href="<%=context%>/ServletEliminar?&id=<%=ls.get(i).getId()%>">
+                            <input type="button" value="Eliminar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="<%=context%>/ServletModificar?&id=<%=ls.get(i).getId()%>&nombre=<%=ls.get(i).getNombre()%>">
+                            <input type="button" value="Modificar">
+                        </a>
+                    </td>
+                </tr>
+                <%}%>
+            </tbody>
+        </table>
     </body>
 </html>
